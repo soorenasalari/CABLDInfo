@@ -59,6 +59,9 @@
     <section class="content-section" id="introduction">
       <h2>Introduction</h2>
       <p>Brain anatomical landmarks serve as critical reference points for neuro-navigation, disease diagnosis, and registration quality assessment. Manual annotation demands expert knowledge and is time-intensive. While deep learning approaches have accelerated landmark detection, they often rely on large labeled datasets and struggle with varying MRI contrasts. Self-supervised methods address label scarcity but may lack consistent protocols across subjects and contrasts. CABLD bridges these gaps by integrating consistency-based losses with contrast augmentation to yield accurate, protocol-driven landmark predictions using only a single reference atlas.</p>
+      <div style="display: flex; justify-content: center;">
+        <img src="Assets/Workflow_2.png" alt="CABLD Workflow" style="width:90%; height:auto;">
+      </div>
     </section>
 
     <section class="content-section" id="methodology">
@@ -76,12 +79,13 @@
       <h2>Results</h2>
       <p>CABLD was evaluated on HCP-T1w, OASIS, SNSX, and HCP-T2w datasets against classical and learning-based baselines. Key findings include:</p>
       <ul>
-        <li><strong>HCP-T1w:</strong> Lowest MRE of 3.27 ± 2.24 mm; SDR@3mm: 54.5%, @6mm: 93.7%, @9mm: 98.9%.</li>
-        <li><strong>OASIS & SNSX:</strong> Consistent performance gains over ANTs, NiftyReg, KeyMorph, and supervised CNNs (p &lt; 0.05).</li>
-        <li><strong>HCP-T2w:</strong> MRE of 3.99 ± 2.25 mm, competitive with ANTs; highest SDR@6mm and @9mm without T2w training.</li>
+        <li><strong>HCP-T1w:</strong> Lowest MRE of 3.27 ± 2.24 mm; SDR@3mm: 54.5%, @6mm: 93.7%, @9mm: 98.9%.</li>
+        <li><strong>OASIS & SNSX:</strong> Consistent performance gains over ANTs, NiftyReg, KeyMorph, and supervised CNNs (p &lt; 0.05).</li>
+        <li><strong>HCP-T2w:</strong> MRE of 3.99 ± 2.25 mm, competitive with ANTs; highest SDR@6mm and @9mm without T2w training.</li>
       </ul>
-      <div style="display: flex; justify-content: center;">
-        <img src="Assets/performance_comparison_mre_2_edited.png" alt="Performance Comparison" style="width:60%; height:auto;">
+      <div style="display: flex; justify-content: center; gap:2rem; flex-wrap: wrap;">
+        <img src="Assets/QualitativeResult_H.png" alt="Qualitative Results" style="width:45%; height:auto;">
+        <img src="Assets/performance_comparison_mre_2_edited.png" alt="Performance Comparison" style="width:45%; height:auto;">
       </div>
     </section>
 
